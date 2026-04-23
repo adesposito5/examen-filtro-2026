@@ -18,7 +18,7 @@ html {
 
 .header {
   grid-area: header;
-  background: #1a1a2e;
+  background: #161629;
   padding: 16px 40px;
   border-bottom: 3px solid #e94560;
 }
@@ -103,9 +103,10 @@ html {
   background: #0f3460;
 }
 
-/* Error: grilla de stats con float en lugar de CSS Grid */
 .stats-grid {
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
 }
 
 .stat-card {
@@ -198,8 +199,8 @@ dd {
   background: #0f3460;
 }
 
-/* Error: campos sin estilos accesibles, sin indicador de foco visible */
-input, select {
+input,
+select {
   display: block;
   width: 100%;
   max-width: 500px;
